@@ -17,6 +17,7 @@ public class CannonControl : MonoBehaviour
     bool piggyshot = false;
 
     public AudioSource shotsound;
+    public AudioSource MainSound;
     public LevelManager levelManager;
 
     int DieLife;
@@ -25,7 +26,7 @@ public class CannonControl : MonoBehaviour
     {
         piggyRB.AddForce(direction* STRENTH *piggyRB.mass*0);
         piggyRB.gravityScale = 0;
-
+        MainSound.Play();
     }
 
 
